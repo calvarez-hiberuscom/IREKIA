@@ -1,0 +1,71 @@
+🔎 Qué es Irekia y qué rol cumple en el ecosistema euskadi.eus
+🧩 1. Irekia como canal de Gobierno Abierto
+Irekia es el portal oficial del Gobierno Abierto del Gobierno Vasco, creado para facilitar la transparencia, participación y colaboración entre la ciudadanía y la Administración.
+ [irekia.euskadi.eus]
+Es un canal directo de comunicación online donde:
+
+La ciudadanía consulta en tiempo real la actividad del Gobierno.
+Puede participar opinando sobre anteproyectos, leyes o iniciativas.
+Puede formular propuestas ciudadanas.
+ [irekia.euskadi.eus]
+
+No es un portal informativo general ni un gestor de trámites: es la ventana de apertura y relación bidireccional del Gobierno Vasco.
+
+🧵 2. Relación de Irekia con euskadi.eus
+Aunque es un portal independiente (irekia.euskadi.eus), forma parte de la red de portales del ecosistema euskadi.eus y es una pieza central en el ámbito de comunicación y gobierno abierto.
+Su papel dentro del ecosistema es:
+a) Ser el portal que articula la política de Gobierno Abierto
+Irekia refleja de manera pública:
+
+Noticias comentables
+Agenda del Gobierno
+Material audiovisual
+Participación ciudadana
+ [irekia.euskadi.eus], [irekia.euskadi.eus]
+
+b) Complementar euskadi.eus con transparencia y participación
+Mientras euskadi.eus centraliza información y servicios administrativos, Irekia añade la capa de interacción democrática, aportando:
+
+Debate público
+Consultas
+Publicación de propuestas ciudadanas
+Contraste de iniciativas del Ejecutivo
+ [irekia.euskadi.eus]
+
+c) Ser parte de la estrategia de digitalización y participación del Gobierno Vasco
+Documentación digital de Euskadi lo categoriza como actor clave del Gobierno Digital, con foco en la participación ciudadana, uso de redes sociales y apertura del código (OpenIrekia).
+ [tdigitaleu...kitoki.org]
+d) Integración con la red de portales y estructura editorial del Gobierno Vasco
+Funciona con:
+
+Gestión de contenidos descentralizada con editores de cada departamento.
+Administración técnica centralizada.
+Alta producción multimedia integrada en la red de portales del Gobierno Vasco.
+ [administra...ica.gob.es]
+
+
+⚙️ 3. Rol técnico y operativo dentro del ecosistema
+La iniciativa se apoya en:
+
+Software libre (Ruby on Rails, PostgreSQL, Linux, etc.)
+Publicación del código como OpenIrekia.
+Accesibilidad y multicanalidad.
+ [administra...ica.gob.es], [tdigitaleu...kitoki.org]
+
+Es decir, además de ser un portal de participación, aporta un modelo tecnológico transparente y reutilizable dentro del ecosistema euskadi.eus.
+
+🧭 4. En resumen: qué aporta Irekia al ecosistema euskadi.eus
+Irekia es el componente del ecosistema euskadi.eus dedicado al Gobierno Abierto, aportando:
+
+Función: Transparencia
+Qué aporta: Publicación de actualidad, agenda, contenidos multimedia, decisiones del Gobierno
+Función: Participación
+Qué aporta:Comentarios, debates públicos, aportaciones a iniciativas y anteproyectos
+Función: Propuestas ciudadanas
+Qué aporta:Espacio para crear y elevar propuestas al Ejecutivo
+Función:Colaboración
+Qué aporta:Interacción con ciudadanía, empresas, organizaciones y otras administraciones
+Función:Tecnología abierta
+Qué aporta:Portal construido con software libre y publicado como OpenIrekia
+Función:Canal multimedia
+Qué aporta:Noticias, streaming, fotos, vídeos y agregación de RRSS

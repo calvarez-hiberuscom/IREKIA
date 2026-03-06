@@ -1,0 +1,163 @@
+🌐 ¿Qué es euskadi.eus?
+Es el portal unificado del Gobierno Vasco, donde se concentran toda la información institucional, los servicios digitales, trámites, sedes electrónicas y portales sectoriales del sector público vasco.
+El portal actúa como punto de entrada único para ciudadanía, empresas y profesionales.
+ [euskadi.eus]
+Además, su arquitectura, gestión y despliegues técnicos están gestionados por EJIE, la Sociedad Informática del Gobierno Vasco.
+ [euskadi.eus]
+
+🧩 1. Ecosistema funcional de euskadi.eus
+El portal está formado por múltiples subsistemas y portales especializados, todos bajo la misma plataforma de gestión web del Gobierno Vasco.
+Principales bloques funcionales visibles para el usuario
+Según el portal principal, euskadi.eus engloba:
+ [euskadi.eus]
+
+Mi Carpeta: acceso a expedientes, certificaciones, pagos, notificaciones.
+Sede electrónica: registro electrónico, trámites, firma, notificaciones.
+BOPV: Boletín Oficial del País Vasco.
+Osakidetza: Cita previa, Carpeta de salud, OPEs.
+Euskalmet: Meteorología.
+Educación: becas, FP, listas de sustituciones, oposiciones.
+Empleo público: OPE, listas de contratación.
+Lanbide: empleo, formación, ayudas.
+Vivienda: acceso, ayudas, alquiler.
+Medio ambiente y territorio: datos abiertos, geoEuskadi, información medioambiental.
+Empresa y actividad económica.
+Cultura y deporte.
+Familia y asuntos sociales.
+Tráfico, seguridad y transporte.
+
+Portales especializados dentro del ecosistema
+Euskadi.eus incluye decenas de portales internos (inventario gestionado por el Servicio Web de EJIE):
+ [euskadi.eus]
+
+Intranets departamentales
+Blogs institucionales
+Newsletters
+Portales temáticos (ej. Medio Ambiente, Juventud, Educación…)
+Portales de datos geográficos (geoEuskadi)
+Plataformas especializadas como:
+
+Arreta Soziosanitarioa
+ [arretasozi...uskadi.eus]
+Lanbide
+ [lanbide.euskadi.eus]
+Portales de análisis y cartografía de ecosistemas, datasets, SIG, etc.
+ [euskadi.eus]
+
+
+
+
+🏗️ 2. ¿Cómo está montado el ecosistema?
+Aunque las tecnologías exactas internas no se detallan públicamente, sí existe información oficial sobre cómo se gobierna y gestiona la plataforma euskadi.eus.
+2.1. Modelo de gestión y gobierno
+La gestión técnica, editorial y de accesibilidad del portal está regulada por:
+
+Servicio Web del Gobierno Vasco (gestión de portales, accesibilidad, contenidos, SEO, catálogos, permisos…).
+Basado en el Modelo de Gestión TIC del Sector Público Vasco definido por decreto.
+ [euskadi.eus]
+
+Funciones oficiales del Servicio Web:
+
+Crear y gestionar portales.
+Gestionar permisos, usuarios y workareas.
+Normativa de estilo, accesibilidad y diseño responsive.
+Bilingüismo (euskera/castellano).
+Analítica web.
+Catálogo de dominios, alias y redirecciones.
+Manuales de gestores de contenidos y portales.
+
+
+2.2. Rol de EJIE
+EJIE es el operador tecnológico del Gobierno Vasco y responsable de la infraestructura TIC sobre la que corre euskadi.eus:
+ [euskadi.eus]
+Responsabilidades relevantes para el ecosistema web:
+
+Infraestructuras y plataformas.
+Seguridad, comunicaciones, alojamiento y continuidad.
+Consultoría, desarrollo y mantenimiento evolutivo de plataformas.
+Proyectos transversales de interoperabilidad, cloud, seguridad.
+
+Ejemplo de contratación pública relacionada con plataformas del GV:
+ [euskadi.eus]
+
+“Servicios para Consultoría, Diseño, Construcción, Proyectos, Entrega, Despliegue y Soporte de Servicios Plataformas.”
+
+
+2.3. Componentes técnicos conocidos (no tecnológicos concretos, sino funcionales)
+Basado en la documentación pública del Servicio Web:
+ [euskadi.eus]
+
+CMS corporativo con roles (editor, revisor, gestor, admin).
+Gestor de portales con plantillas, libros de estilo, componentes reutilizables.
+Catálogo de elementos comunes (cabeceras, menus, pie, buscador…).
+Analítica web centralizada.
+Gestión de intranets.
+Normativa de accesibilidad y SEO unificada.
+Integraciones con servicios del gobierno (Mi Carpeta, pago online, identidades Izenpe…).
+Catálogo de dominios y redirecciones.
+
+
+2.4. Ecosistema técnico y otras plataformas conectadas
+Aunque cada plataforma se implementa con tecnologías diferentes, EJIE gestiona también:
+
+Plataformas de interoperabilidad sociosanitaria
+ [es.openpro...ements.com]
+Sistemas internos y planes de sistemas departamentales
+ [ted.europa.eu]
+
+Estos sistemas se conectan con:
+
+Sede electrónica
+Identidad digital (Izenpe / BAK / BAKQ)
+Sistemas de firma
+Sistemas de expedientes y registro
+Servicios de datos y APIs internos
+
+
+🧱 3. Cómo se organiza la arquitectura a nivel macro
+Con la suma de datos públicos se puede describir un modelo de arquitectura “macro” así:
+Capa 1 – Presentación
+Portales de euskadi.eus
+
+Contenidos, trámites, información.
+Portales temáticos.
+Intranets.
+Blogs.
+
+Capa 2 – Servicios corporativos
+
+Sede electrónica
+Mi Carpeta
+Buscador unificado
+Pago online
+Traducciones, diccionarios, bilingüismo
+Notificaciones electrónicas
+Identificación/autenticación (Izenpe, BAKQ)
+
+Capa 3 – Plataformas transversales gestionadas por EJIE
+
+Infraestructura cloud / on-premise del sector público vasco
+Plataforma web corporativa
+Sistemas de seguridad y comunicaciones
+Sistemas compartidos (interoperabilidad, datos geográficos, analítica)
+
+Capa 4 – Sistemas sectoriales
+
+Osakidetza
+Lanbide
+Vivienda
+Educación
+Medio ambiente, geoEuskadi
+Tráfico y emergencias
+Empresa y economía
+
+
+📌 Resumen corto
+
+Euskadi.eus es el portal unificado del Gobierno Vasco donde se publican información, trámites y servicios de toda la administración.
+El ecosistema incluye decenas de portales temáticos, servicios transversales (Mi Carpeta, Sede Electrónica, Pago Online…), integraciones sectoriales y plataformas de datos.
+EJIE provee la infraestructura, seguridad, despliegue y mantenimiento de la plataforma.
+El Servicio Web del Gobierno Vasco gestiona portales, contenidos, accesibilidad y el modelo editorial y de diseño.
+
+
+Si quieres, puedo hacerte un diagrama visual, una descripción más técnica orientada a arquitectos, o explicarte cómo encaja vuestro Compositor de Formularios dentro de este ecosistema.
