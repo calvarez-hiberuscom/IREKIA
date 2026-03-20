@@ -88,7 +88,7 @@ $sel.Style = $doc.Styles.Item($wdStyleNormal)
 $sel.Font.Color = 8421504  # Gris
 $sel.TypeText("Estado: Borrador para alineamiento")
 $sel.TypeParagraph()
-$sel.TypeText("Fecha: 11 de marzo de 2026")
+$sel.TypeText("Fecha: 20 de marzo de 2026 (actualizado)")
 $sel.TypeParagraph()
 $sel.TypeText("Autor: EJIE / Hiberus")
 $sel.TypeParagraph()
@@ -162,6 +162,11 @@ Write-Normal "Las decisiones criticas pendientes son: la estrategia de repositor
 
 Write-EmptyLine
 
+Write-Bold "Hito reciente (18/03/2026):"
+Write-Normal "El pliego se pre-aprobo el 17 de marzo de 2026 y va a salir publicado en breve. Esto marca el inicio formal del proceso de contratacion."
+
+Write-EmptyLine
+
 Write-Normal "El siguiente hito inmediato es validar este documento y programar las sesiones de trabajo necesarias para resolver las dudas abiertas."
 
 $sel.InsertBreak(7)  # Page break
@@ -180,8 +185,13 @@ Write-Normal "La plataforma actual se apoya en:"
 Write-Bullet "Un CMS corporativo donde los funcionarios crean contenidos por tipo (noticia, evento, contenido general)."
 Write-Bullet "Un gestor de ejes de catalogacion que clasifica los contenidos por tematica (sanidad, vivienda, etc.)."
 Write-Bullet "Una herramienta de portales basada en plantillas (cabecera, pie, menu, estructura central)."
-Write-Bullet "Irekia actual: construido en Ruby on Rails, PostgreSQL, Linux (publicado como OpenIrekia)."
+Write-Bullet "Irekia actual: construido en Ruby on Rails, PostgreSQL, Linux (publicado como OpenIrekia). Es un portal fuera de euskadi.eus."
 Write-Bullet "Gardena: portal de transparencia actual, que utiliza un modulo de Insight de Esri para visualizacion de datos."
+Write-Bullet "Modulos transversales existentes: Seguridad, directorio, etiquetas, geocatalogacion y publicador. Estos modulos son compartidos por el ecosistema y deberan integrarse con los nuevos sistemas."
+
+Write-EmptyLine
+Write-Bold "Actores implicados en el diseno:"
+Write-Bullet "La Personalite: empresa de diseno de concepto/servicio y visual de toda la parte web con salida al exterior."
 
 Write-Heading "2.2. Detonante del proyecto" 2
 
@@ -200,6 +210,44 @@ Write-Bullet "Los sistemas de gestion son aplicaciones independientes (back-offi
 Write-Bullet "La publicacion se realiza a traves del CMS/portales de euskadi.eus."
 Write-Bullet "Todo debe desarrollarse con la tecnologia estandar de administracion digital (Kubernetes, ecosistema de presencia web de EJIE)."
 Write-BulletBoldAndNormal "Desarrollo a medida. " "No se contempla la integracion de productos cerrados ni soluciones existentes de terceros."
+
+Write-Heading "2.4. Esquema general de sistemas (segun esquema de Maria, 18/03/2026)" 2
+
+Write-Normal "El proyecto se organiza en tres grandes columnas funcionales, conectadas por una capa transversal de modulos compartidos y un publicador comun que da salida a euskadi.eus:"
+
+Write-EmptyLine
+Write-Bold "Columna 1 - Gobierno Abierto (Irekia Berria):"
+Write-Normal "Sistema de gestion con dos ramas:"
+Write-Bullet "Participacion: Iniciativas de Gobierno + Participacion Ciudadana."
+Write-Bullet "Transparencia: Programas/Planes + Contenidos de Transparencia + ¿Open Data? (Insight / graficos)."
+
+Write-EmptyLine
+Write-Bold "Columna 2 - Comunicacion Institucional:"
+Write-Normal "Sistema de gestion que integra:"
+Write-Bullet "Noticias y Gestion de Eventos."
+Write-Bullet "Contenidos editoriales."
+Write-Bullet "Gestion de la Actividad (Evento)."
+Write-Bullet "Gestion de Activos."
+Write-Bullet "Gestion de los contenidos de comunicacion."
+Write-Bullet "Herramientas asociadas: DAM y Streaming."
+
+Write-EmptyLine
+Write-Bold "Columna 3 - Diaspora:"
+Write-Normal "Sistema de gestion propio que alimenta:"
+Write-Bullet "Portal de la Diaspora (con opciones comunes configurables por sede)."
+
+Write-EmptyLine
+Write-Bold "Capa transversal (base):"
+Write-Normal "Todos los sistemas comparten los siguientes modulos transversales:"
+Write-Bullet "Seguridad."
+Write-Bullet "Directorio."
+Write-Bullet "Etiquetas."
+Write-Bullet "Geocatalogacion."
+Write-Bullet "Publicador."
+
+Write-EmptyLine
+Write-Bold "Capa de publicacion (superior):"
+Write-Normal "Sobre las tres columnas opera un Publicador comun que conecta todos los sistemas con el CMS de euskadi.eus para la publicacion en los portales de salida."
 
 $sel.InsertBreak(7)  # Page break
 
@@ -220,8 +268,17 @@ Write-BoldAndNormal "Objetivo: " "Construir el nuevo portal publico de Gobierno 
 
 Write-Heading "3.1.1. Alcance conocido" 3
 Write-Bullet "Diseno y desarrollo del nuevo portal web."
-Write-Bullet "Integracion de contenidos de transparencia (procedentes del sistema de gestion de transparencia)."
-Write-Bullet "Integracion de procesos de participacion (procedentes del sistema de gestion de participacion)."
+Write-Normal "El portal tendra dos grandes pilares funcionales:"
+Write-EmptyLine
+Write-Bold "Pilar de Participacion:"
+Write-Bullet "Participacion en iniciativas de gobierno (normativa)."
+Write-Bullet "Participacion ciudadana (voluntaria, no vinculada a ley)."
+Write-EmptyLine
+Write-Bold "Pilar de Transparencia:"
+Write-Bullet "Programas, planes y proyectos de gobierno (ver bloque 3.2bis)."
+Write-Bullet "Contenidos de transparencia (procedentes del sistema de gestion de transparencia)."
+Write-Bullet "Open data / visualizaciones (pendiente de delimitar alcance - ver nota en 3.2)."
+Write-EmptyLine
 Write-Bullet "Desaparicion de las noticias como contenido propio de Irekia."
 Write-Bullet "Sustitucion de la tecnologia actual (Ruby on Rails) por el stack estandar de EJIE."
 Write-Bullet "Accesibilidad, bilinguismo euskera/castellano, diseno responsive."
@@ -244,11 +301,31 @@ Write-Bullet "Sustituir el modulo Insight de Esri por una alternativa para la vi
 Write-Bullet "Replicar o mejorar los flujos actuales de publicacion que usan los funcionarios."
 Write-Bullet "Integracion con el repositorio/CMS de contenidos existente (por definir si se reutiliza o se crea nuevo)."
 
-Write-Heading "3.2.2. Decisiones pendientes" 3
+Write-Heading "3.2.2. Nota sobre transparencia y open data" 3
+Write-Normal "Segun la reunion del 18/03/2026: 'Toda la transparencia tendria que estar en open data, pero no todo lo de open data tendria que estar en transparencia.' Es decir, la transparencia es un subconjunto de open data. Los graficos de Insight de Esri (¿open data?) estan en la frontera."
+
+Write-Heading "3.2.3. Decisiones pendientes" 3
 Write-Bullet "Si se reutiliza el repositorio de contenido actual de Gardena o se crea uno nuevo."
-Write-Bullet "Que herramienta o desarrollo sustituira a Insight de Esri."
+Write-Bullet "Que herramienta o desarrollo sustituira a Insight de Esri para la visualizacion de datos."
 Write-Bullet "Si se proponen mejoras funcionales de transparencia (pendiente de validacion con la Directora de Gobierno, via Alex)."
-Write-Bullet "Donde esta la linea entre transparencia y open data en el contexto del Gobierno Vasco."
+Write-Bullet "Que contenidos de open data se muestran dentro de Irekia Berria (seccion transparencia) y cuales quedan solo en Open Data Euskadi."
+
+Write-EmptyLine
+
+# --- BLOQUE 2bis: GESTION DE PROGRAMAS, PLANES Y PROYECTOS ---
+Write-Heading "3.2bis. Gestion de Programas, Planes y Proyectos" 2
+
+Write-BoldAndNormal "Objetivo: " "Aplicacion que reuna la gestion y publicacion de programas, planes y proyectos de legislaturas y del gobierno. Da visibilidad al seguimiento de compromisos de gobierno. Es parte de transparencia."
+
+Write-Heading "3.2bis.1. Alcance conocido" 3
+Write-Bullet "Se requiere una aplicacion que consolide todos los programas, planes y proyectos y permita su publicacion."
+Write-Bullet "Se publicara como parte del pilar de transparencia en Irekia Berria."
+Write-Bullet "Abarca contenidos como: Plan de Accion de Gobierno Abierto, Programa de Gobierno, Presupuestos, planes sectoriales."
+
+Write-Heading "3.2bis.2. Decisiones pendientes" 3
+Write-Bullet "Detalle funcional de esta aplicacion: ¿se trata de fichas estaticas o de un seguimiento vivo con indicadores de cumplimiento?"
+Write-Bullet "¿Se integra dentro del sistema de gestion de transparencia o es un modulo diferenciado?"
+Write-Bullet "¿Que datos de seguimiento se exponen al ciudadano?"
 
 Write-EmptyLine
 
@@ -282,13 +359,20 @@ Write-BoldAndNormal "Objetivo: " "Desarrollar un sistema integral de gestion de 
 Write-Bold "Importante: Este bloque NO publica en Irekia. Publica en euskadi.eus, homes departamentales y otros canales."
 
 Write-Heading "3.4.1. Alcance conocido" 3
-Write-Bullet "Gestion completa del proceso de eventos: calendarizacion, asignacion de recursos, produccion de contenidos."
+Write-Normal "Segun la reunion del 18/03/2026, el portal de Comunicacion Institucional se estructura en los siguientes sub-bloques:"
+Write-Bullet "Gestion de eventos y noticias: calendarizacion, asignacion de recursos, produccion de contenidos."
+Write-Bullet "Gestion de la actividad (evento): ciclo completo del evento comunicativo."
+Write-Bullet "Gestion de activos: conexion con un DAM (Digital Asset Management) y streaming. El portal de comunicacion necesita DAM y Streaming."
+Write-Bullet "Gestion de los contenidos de comunicacion: flujo editorial, revision, publicacion."
 Write-Bullet "Diferentes roles en el proceso: jefe de prensa (calendariza), PM y gestor de contenidos (detalles operativos), agencias externas (pueden acceder al sistema con permisos adecuados)."
 Write-Bullet "Generacion de multiples tipos de output: fotos, videos, streaming, noticias texto, contenidos para RRSS."
-Write-Bullet "Conexion con un DAM (Digital Asset Management) para almacenar, coordinar, etiquetar y reutilizar los assets de forma cruzada."
-Write-Bullet "Los gabinetes de prensa de cada departamento deben poder usar el sistema y disponer de la informacion para publicar."
+Write-Bullet "Los gabinetes de prensa de cada departamento deben poder usar el sistema."
 Write-Bullet "Publicacion en: home de euskadi.eus, homes departamentales, RRSS."
 Write-Bullet "Debe simplificar y mejorar el proceso actual de creacion de noticias en euskadi.eus."
+
+Write-EmptyLine
+Write-Bold "Integracion con modulos transversales:"
+Write-Bullet "Comunicacion se integrara con los modulos existentes: activos, directorios, etiquetas, geocatalogador y publicador."
 
 Write-Heading "3.4.2. Consideraciones" 3
 Write-BulletBoldAndNormal "No se utilizara un producto cerrado. " "Se descarta la integracion de productos existentes (como Xalok u otros). El sistema sera un desarrollo a medida."
@@ -303,12 +387,18 @@ Write-Heading "3.5. Bloque 5 - Diaspora (Sedes vascas en el extranjero)" 2
 Write-BoldAndNormal "Objetivo: " "Dotar a las sedes vascas en el extranjero de herramientas para gestionar sus propias paginas web."
 
 Write-Heading "3.5.1. Alcance conocido" 3
+Write-Bullet "Las paginas de la diaspora iran bajo el paraguas de un portal propio que se cree para este fin."
+Write-Bullet "Actualmente estas paginas estan en euskaletxeak.eus."
 Write-Bullet "Modelo similar al sistema de bibliotecas: una plantilla comun con capacidad de personalizacion por sede."
 Write-Bullet "Estructura de plantilla de portales + publicacion de contenidos."
+Write-Bullet "Incluye: menu, tags, RRSS, noticias, eventos propios de cada sede."
 
 Write-Heading "3.5.2. Problematica especifica" 3
 Write-Bullet "Los usuarios en el extranjero no disponen de BAK ni certificado digital. Se necesita un sistema de autenticacion alternativo."
 Write-Bullet "Existen soluciones intermedias actuales, pero se quiere un sistema especifico."
+
+Write-Heading "3.5.3. Decisiones pendientes" 3
+Write-Bullet "¿Quieren las sedes de la diaspora tener visibilidad dentro de euskadi.eus ademas de su portal propio?"
 
 Write-EmptyLine
 
@@ -335,30 +425,46 @@ $sel.InsertBreak(7)  # Page break
 
 Write-Heading "4. Mapa de sistemas y flujos de publicacion" 1
 
-Write-Normal "A continuacion se describe como se relacionan los sistemas de gestion con los canales de publicacion, segun la informacion disponible:"
+Write-Normal "A continuacion se describe como se relacionan los sistemas de gestion con los canales de publicacion. La estructura refleja el esquema de tres columnas definido por Maria (18/03/2026), donde cada columna representa un sistema de gestion independiente que converge en un publicador comun conectado al CMS de euskadi.eus."
 
-Write-Heading "4.1. Sistema de gestion de Transparencia" 2
-Write-Bullet "Fuente: repositorio de contenido de Gardena (o nuevo, pendiente de decidir)."
-Write-Bullet "Destino de publicacion: Nuevo portal Irekia (seccion Transparencia)."
+Write-Heading "4.1. Columna 1 - Gobierno Abierto (Irekia Berria)" 2
 
-Write-Heading "4.2. Sistema de gestion de Participacion" 2
-Write-Bullet "Fuente 1: Tramitagune (participacion formal / normativa)."
-Write-Bullet "Fuente 2: Sistema propio de participacion voluntaria."
-Write-Bullet "Destino de publicacion: Nuevo portal Irekia (seccion Participacion)."
+Write-Heading "4.1.1. Flujo de Participacion" 3
+Write-Bullet "Fuente 1: Tramitagune (participacion formal / normativa) - rama de Iniciativas de Gobierno."
+Write-Bullet "Fuente 2: Sistema propio de participacion voluntaria - rama de Participacion Ciudadana."
+Write-Bullet "Destino de publicacion: Irekia Berria (seccion Participacion) via Publicador."
 
-Write-Heading "4.3. Sistema de gestion de Prensa" 2
-Write-Bullet "Fuente: Sistema nuevo de gestion integral de eventos y comunicacion."
-Write-Bullet "Almacenamiento de contenido: CMS actual de euskadi.eus."
-Write-Bullet "Almacenamiento de assets: DAM (nuevo o existente)."
-Write-Bullet "Destino de publicacion: Home de euskadi.eus, homes departamentales, RRSS."
+Write-Heading "4.1.2. Flujo de Transparencia" 3
+Write-Bullet "Fuente 1: Repositorio de contenido de Gardena (o nuevo, pendiente de decidir) - Contenidos de Transparencia."
+Write-Bullet "Fuente 2: Aplicacion de Programas/Planes (nuevo) - seguimiento de programas de gobierno."
+Write-Bullet "Fuente 3: ¿Open Data / Insight? - pendiente de delimitar que visualizaciones entran en Irekia."
+Write-Bullet "Destino de publicacion: Irekia Berria (seccion Transparencia) via Publicador."
+
+Write-Heading "4.2. Columna 2 - Comunicacion Institucional" 2
+Write-Bullet "Fuente: Sistema nuevo de gestion integral de comunicacion (eventos, noticias, contenidos)."
+Write-Bullet "Componentes internos del sistema: Gestion de Eventos + Gestion de la Actividad (Evento) + Gestion de Activos + Gestion de los contenidos de comunicacion."
+Write-Bullet "Almacenamiento de contenido editorial: via Publicador al CMS actual de euskadi.eus."
+Write-Bullet "Almacenamiento de assets multimedia: DAM."
+Write-Bullet "Streaming: integrado en el sistema de comunicacion."
+Write-Bullet "Destino de publicacion: Home de euskadi.eus, homes departamentales, RRSS y otros canales."
 Write-Bullet "NO publica en Irekia."
 
-Write-Heading "4.4. Diaspora" 2
-Write-Bullet "Fuente: Sistema propio de gestion de contenidos de las sedes."
-Write-Bullet "Destino: Portales individuales de cada sede vasca en el extranjero."
+Write-Heading "4.3. Columna 3 - Diaspora" 2
+Write-Bullet "Fuente: Sistema propio de gestion de la diaspora."
+Write-Bullet "Modelo: Portal de la Diaspora con opciones comunes configurables por sede."
+Write-Bullet "Contenidos: menu, tags, RRSS, noticias, eventos propios de cada sede."
+Write-Bullet "Destino: Portales individuales de cada sede vasca en el extranjero (actualmente euskaletxeak.eus)."
+
+Write-Heading "4.4. Capa transversal - Modulos compartidos" 2
+Write-Normal "Los tres sistemas de gestion se apoyan en una capa de modulos transversales compartidos:"
+Write-Bullet "Seguridad (existente, requiere adaptacion)."
+Write-Bullet "Directorio."
+Write-Bullet "Etiquetas."
+Write-Bullet "Geocatalogacion."
+Write-Bullet "Publicador (capa superior que conecta los tres sistemas con el CMS de euskadi.eus)."
 
 Write-Heading "4.5. Entidades y cargos publicos" 2
-Write-Bullet "Actualmente en Irekia. Pendiente de definir si se mantiene en Irekia Berria o migra a otro sistema."
+Write-Bullet "Actualmente en Irekia. Pendiente de definir si se mantiene en Irekia Berria (transparencia) o migra a otro sistema."
 
 $sel.InsertBreak(7)  # Page break
 
@@ -375,6 +481,16 @@ Write-Bullet "Existe un contrato con EJIE con tarifas por perfil ya establecidas
 Write-Bullet "No es objeto de este proyecto migrar euskadi.eus, pero los desarrollos deben ser compatibles y acompasados."
 Write-Bullet "La parte funcional detallada la definira la consultora que lleva el ANS, apoyada por Sonia (modulos y sistemas del CMS actual)."
 Write-Bullet "A nivel tecnologico, EJIE / Hiberus deben encargarse de que todo funcione dentro del ecosistema de presencia web."
+Write-Bullet "El pliego se pre-aprobo el 17 de marzo de 2026. Va a salir publicado en breve."
+
+Write-EmptyLine
+Write-Bold "Modulos transversales existentes:"
+Write-Normal "Los nuevos sistemas deberan integrarse con los modulos transversales que ya existen en el ecosistema:"
+Write-Bullet "Seguridad: modulo transversal existente que va a haber que tocar/adaptar."
+Write-Bullet "Directorio."
+Write-Bullet "Etiquetas."
+Write-Bullet "Geocatalogacion."
+Write-Bullet "Publicador."
 
 $sel.InsertBreak(7)  # Page break
 
@@ -388,7 +504,9 @@ Write-Heading "6.1. Sobre Transparencia" 2
 Write-Bullet "Se reutiliza el repositorio de contenido de Gardena o se desarrolla uno nuevo?"
 Write-Bullet "Que sustituye al modulo Insight de Esri para la visualizacion de datos?"
 Write-Bullet "Se proponen mejoras funcionales de transparencia o se replica el modelo actual con mejor presentacion? (Pendiente de validacion con la Directora de Gobierno, via Alex)."
-Write-Bullet "Donde esta la linea entre transparencia y open data? Es transparencia publicar sueldos de cargos publicos, pero es open data publicar puntos de carga electrica? Como se delimita el alcance?"
+Write-Normal "Nota aclaratoria (reunion 18/03/2026): 'Toda la transparencia tendria que estar en open data, pero no todo lo de open data tendria que estar en transparencia.' La transparencia es un subconjunto del open data. Queda pendiente definir que visualizaciones/datos de open data se integran en la seccion de transparencia de Irekia Berria."
+Write-Bullet "¿Los graficos actuales de Insight (Esri) se consideran transparencia o open data? ¿Deben aparecer en Irekia Berria?"
+Write-Bullet "La Gestion de Programas, Planes y Proyectos se ha identificado como parte de transparencia. ¿Se trata de fichas estaticas o de un seguimiento vivo con indicadores de cumplimiento? ¿Es un modulo diferenciado del sistema de gestion de transparencia?"
 
 Write-Heading "6.2. Sobre Participacion" 2
 Write-Bullet "En la participacion formal (normativa), ademas de las alegaciones formales, se debe abrir a opinion publica?"
@@ -407,18 +525,28 @@ Write-Heading "6.4. Sobre Diaspora" 2
 Write-Bullet "Cuantas sedes existen y cuales son sus necesidades especificas?"
 Write-Bullet "Que solucion de autenticacion se contempla para usuarios sin BAK?"
 Write-Bullet "Que nivel de autonomia tendran las sedes en la gestion de sus portales?"
+Write-Bullet "¿Quieren las sedes de la diaspora tener visibilidad dentro de euskadi.eus, ademas de su portal propio (actualmente euskaletxeak.eus)?"
+Write-Bullet "¿Que funcionalidades especificas necesita cada sede? (menu, tags, RRSS, noticias, eventos se mencionan como contenido minimo)."
 
 Write-Heading "6.5. Sobre Diseno" 2
 Write-Bullet "Existe un sistema de diseno corporativo definido o hay que crearlo desde cero?"
-Write-Bullet "Quien lidera la definicion del diseno: Hiberus, la consultora, Gobierno?"
+Write-Bullet "Quien lidera la definicion del diseno: Hiberus, la consultora, La Personalite, Gobierno?"
 Write-Bullet "Hay directrices de accesibilidad y bilinguismo ya documentadas?"
+Write-Bullet "¿Cual es el reparto de trabajo entre La Personalite (concepto/servicio y visual) y Hiberus (diseno de Irekia)? ¿Trabajan en paralelo, en secuencia, con entregables cruzados?"
 
 Write-Heading "6.6. Sobre Organizacion y Gobierno del Proyecto" 2
 Write-Bullet "Quien es el responsable funcional de cada bloque?"
 Write-Bullet "Cual es la priorizacion entre bloques? Se abordan todos en paralelo o hay secuencia?"
-Write-Bullet "Hay plazos comprometidos o hitos conocidos?"
+Write-Bullet "Hay plazos comprometidos o hitos conocidos? (El pliego se pre-aprobo el 17/03/2026 y saldra publicado en breve.)"
 Write-Bullet "Que papel juega la consultora del ANS frente a EJIE y frente a Hiberus?"
 Write-Bullet "Cuando podra Sonia proporcionar el detalle de modulos y sistemas implicados?"
+Write-Bullet "¿Como se coordina el trabajo con La Personalite (diseno visual) respecto al resto de los bloques?"
+
+Write-Heading "6.8. Sobre Modulos Transversales" 2
+Write-Bullet "El modulo de seguridad existente: ¿que adaptaciones necesita para soportar los nuevos sistemas?"
+Write-Bullet "El modulo de directorio: ¿es suficiente para los nuevos portales o requiere ampliacion?"
+Write-Bullet "Las etiquetas y la geocatalogacion: ¿se reutilizan tal cual o necesitan evolucion?"
+Write-Bullet "El publicador: ¿se adapta para publicar en los nuevos portales (Irekia Berria, comunicacion, diaspora) o necesita desarrollo adicional?"
 
 Write-Heading "6.7. Sobre Entidades y Cargos Publicos" 2
 Write-Bullet "El modulo de entidades y cargos publicos que hoy esta en Irekia, se mantiene en Irekia Berria?"
